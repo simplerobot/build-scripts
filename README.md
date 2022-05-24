@@ -6,13 +6,15 @@ GITHUB_DEPS += simplerobot/build-scripts
 GITHUB_DEPS += simplerobot/test
 GITHUB_DEPS += simplerobot/lib-jsoncpp
 
+include ../build-scripts/build/release/include.make
+
 default : ...
 
-include ../build-scripts/build/release/include.make
 ```
 
 This example will ensure that the listed packages are included in the workspace
-and built.  It will also define the following:
+and built.  It will also assume the default target is "default". It will also
+define the following:
 ```
 deps : ...
 
